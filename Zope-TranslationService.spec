@@ -5,7 +5,7 @@ Summary(pl):	TranslationService - ¶rodowisko dla t³umaczeñ jêzykowych dla Zope
 Name:		Zope-%{zope_subname}
 Version:	0.4
 Release:	2
-License:	GNU
+License:	GPL v2
 Group:		Development/Tools
 Source0:	http://www.zope.org/Members/efge/%{zope_subname}/%{zope_subname}-%{version}.tgz
 # Source0-md5:	b1399f80dc71ea8a54f4c6dc179c12dd
@@ -26,24 +26,18 @@ TranslationService jest ¶rodowiskiem dla t³umaczeñ jêzykowych dla
 Zope.
 
 %prep
-%setup -q -c %{zope_subname}-%{version}
-
-%build
-cd %{zope_subname}
-mkdir docs
-mv -f HISTORY.txt docs
+%setup -q -n %{zope_subname}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{product_dir}
+install -d $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
 
-cp -af * $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
+cp -af {zmi,*.py,*.gif} $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
 
 %py_comp $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
 %py_ocomp $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
 
 # find $RPM_BUILD_ROOT -type f -name "*.py" -exec rm -rf {} \;;
-rm -rf $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}/docs
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -60,5 +54,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc %{zope_subname}/docs/*
+%doc HISTORY.txt
 %{product_dir}/%{zope_subname}
