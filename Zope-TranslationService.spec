@@ -4,7 +4,7 @@ Summary:	A placeful translation service for Zope
 Summary(pl):	¦rodowisko dla t³umaczeñ jêzykowych dla Zope
 Name:		Zope-%{zope_subname}
 Version:	0.4
-Release:	3
+Release:	4
 License:	GPL v2
 Group:		Development/Tools
 Source0:	http://www.zope.org/Members/efge/%{zope_subname}/%{zope_subname}-%{version}.tgz
@@ -31,7 +31,7 @@ Zope.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
 
-cp -af {zmi,*.py,*.gif} $RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -af {zmi,*.py,*.gif,version.txt} $RPM_BUILD_ROOT%{_datadir}/%{name}
 
 %py_comp $RPM_BUILD_ROOT%{_datadir}/%{name}
 %py_ocomp $RPM_BUILD_ROOT%{_datadir}/%{name}
