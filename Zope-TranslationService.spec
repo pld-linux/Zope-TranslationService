@@ -3,7 +3,7 @@ Summary:	A placeful translation service for Zope
 Summary(pl):	¦rodowisko dla t³umaczeñ jêzykowych dla Zope
 Name:		Zope-%{zope_subname}
 Version:	0.4
-Release:	5
+Release:	6
 License:	GPL v2
 Group:		Development/Tools
 Source0:	http://www.zope.org/Members/efge/%{zope_subname}/%{zope_subname}-%{version}.tgz
