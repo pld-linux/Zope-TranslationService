@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.python
 %define		zope_subname	TranslationService
 Summary:	A placeful translation service for Zope
 Summary(pl):	¦rodowisko dla t³umaczeñ jêzykowych dla Zope
