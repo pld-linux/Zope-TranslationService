@@ -1,9 +1,7 @@
 %include	/usr/lib/rpm/macros.python
-
 %define		zope_subname	TranslationService
-
-Summary:	TranslationService is a placeful translation service for Zope
-Summary(pl):	TranslationService jest ¶rodowiskiem dla translacji jêzykowych dla Zope
+Summary:	TranslationService - a placeful translation service for Zope
+Summary(pl):	TranslationService - ¶rodowisko dla t³umaczeñ jêzykowych dla Zope
 Name:		Zope-%{zope_subname}
 Version:	0.4
 Release:	1
@@ -21,11 +19,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define 	product_dir	/usr/lib/zope/Products
 
 %description
-TranslationService is a placeful translation service for Zope
+TranslationService is a placeful translation service for Zope.
 
 %description -l pl
-TranslationService jest ¶rodowiskiem dla translacji jêzykowych dla
-Zope
+TranslationService jest ¶rodowiskiem dla t³umaczeñ jêzykowych dla
+Zope.
 
 %prep
 %setup -q -c %{zope_subname}-%{version}
@@ -33,11 +31,12 @@ Zope
 %build
 cd %{zope_subname}
 mkdir docs
-mv -f HISTORY.txt docs/
+mv -f HISTORY.txt docs
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{product_dir}
+
 cp -af * $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
 
 %py_comp $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
@@ -53,8 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 if [ -f /var/lock/subsys/zope ]; then
 	/etc/rc.d/init.d/zope restart >&2
 fi
-
-%preun
 
 %postun
 if [ -f /var/lock/subsys/zope ]; then
