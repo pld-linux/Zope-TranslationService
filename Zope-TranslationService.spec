@@ -9,6 +9,7 @@ Group:		Development/Tools
 Source0:	http://www.zope.org/Members/efge/%{zope_subname}/%{zope_subname}-%{version}.tgz
 # Source0-md5:	b1399f80dc71ea8a54f4c6dc179c12dd
 URL:		http://www.zope.org/Members/efge/TranslationService
+BuildRequires:  python
 %pyrequires_eq	python-modules
 Requires:	Zope
 Requires:	Zope-Localizer
