@@ -4,7 +4,7 @@ Summary:	TranslationService - a placeful translation service for Zope
 Summary(pl):	TranslationService - ¶rodowisko dla t³umaczeñ jêzykowych dla Zope
 Name:		Zope-%{zope_subname}
 Version:	0.4
-Release:	1
+Release:	2
 License:	GNU
 Group:		Development/Tools
 Source0:	http://www.zope.org/Members/efge/%{zope_subname}/%{zope_subname}-%{version}.tgz
@@ -42,7 +42,7 @@ cp -af * $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
 %py_comp $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
 %py_ocomp $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
 
-find $RPM_BUILD_ROOT -type f -name "*.py" -exec rm -rf {} \;;
+# find $RPM_BUILD_ROOT -type f -name "*.py" -exec rm -rf {} \;;
 rm -rf $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}/docs
 
 %clean
