@@ -1,6 +1,6 @@
 %define		zope_subname	TranslationService
 Summary:	A placeful translation service for Zope
-Summary(pl.UTF-8):   Środowisko dla tłumaczeń językowych dla Zope
+Summary(pl.UTF-8):	Środowisko dla tłumaczeń językowych dla Zope
 Name:		Zope-%{zope_subname}
 Version:	0.4
 Release:	6
