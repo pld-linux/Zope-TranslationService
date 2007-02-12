@@ -1,6 +1,6 @@
 %define		zope_subname	TranslationService
 Summary:	A placeful translation service for Zope
-Summary(pl):	¦rodowisko dla t³umaczeñ jêzykowych dla Zope
+Summary(pl.UTF-8):   Åšrodowisko dla tÅ‚umaczeÅ„ jÄ™zykowych dla Zope
 Name:		Zope-%{zope_subname}
 Version:	0.4
 Release:	6
@@ -21,8 +21,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 TranslationService is a placeful translation service for Zope.
 
-%description -l pl
-TranslationService jest ¶rodowiskiem dla t³umaczeñ jêzykowych dla
+%description -l pl.UTF-8
+TranslationService jest Å›rodowiskiem dla tÅ‚umaczeÅ„ jÄ™zykowych dla
 Zope.
 
 %prep
